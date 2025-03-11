@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayurvedic Store - AyurvedaVeda</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="location-header">
+            <span class="location">📍 AyurvedaVeda Wellness Center</span>
+            <div class="user-info">
+                <span id="user-name"></span>
+                <a href="index.html" class="logout">Logout</a>
+            </div>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search herbal remedies..." id="search-input">
+        </div>
+    </header>
+
+    <main class="menu-container">
+        <section class="food-list">
+            <!-- Classical Formulations -->
+            <div class="category">
+                <h2>Classical Formulations</h2>
+                <div class="items-grid">
+                    <div class="food-card">
+                        <img src="ashwagandha.jpg" alt="Ashwagandha">
+                        <div class="details">
+                            <h3>Ashwagandha Powder</h3>
+                            <div class="rating">⭐ 4.8 (1.2k+ ratings)</div>
+                            <div class="price">₹450 <button onclick="addToCart('Ashwagandha Powder', 450)">ADD</button></div>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <img src="triphala.jpg" alt="Triphala">
+                        <div class="details">
+                            <h3>Triphala Churna</h3>
+                            <div class="rating">⭐ 4.7 (980 ratings)</div>
+                            <div class="price">₹380 <button onclick="addToCart('Triphala Churna', 380)">ADD</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dietary Supplements -->
+            <div class="category">
+                <h2>Dietary Supplements</h2>
+                <div class="items-grid">
+                    <div class="food-card">
+                        <img src="chavanprash.jpg" alt="Chavanprash">
+                        <div class="details">
+                            <h3>Chavanprash</h3>
+                            <div class="rating">⭐ 4.9 (2k+ ratings)</div>
+                            <div class="price">₹650 <button onclick="addToCart('Chavanprash', 650)">ADD</button></div>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <img src="brahmi.jpg" alt="Brahmi">
+                        <div class="details">
+                            <h3>Brahmi Capsules</h3>
+                            <div class="rating">⭐ 4.6 (850 ratings)</div>
+                            <div class="price">₹520 <button onclick="addToCart('Brahmi Capsules', 520)">ADD</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Therapeutic Oils -->
+            <div class="category">
+                <h2>Therapeutic Oils</h2>
+                <div class="items-grid">
+                    <div class="food-card">
+                        <img src="sesame-oil.jpg" alt="Sesame Oil">
+                        <div class="details">
+                            <h3>Medicated Sesame Oil</h3>
+                            <div class="rating">⭐ 4.8 (1.5k ratings)</div>
+                            <div class="price">₹750 <button onclick="addToCart('Medicated Sesame Oil', 750)">ADD</button></div>
+                        </div>
+                    </div>
+
+                    <div class="food-card">
+                        <img src="mahanarayan.jpg" alt="Mahanarayan Oil">
+                        <div class="details">
+                            <h3>Mahanarayan Oil</h3>
+                            <div class="rating">⭐ 4.7 (1.3k ratings)</div>
+                            <div class="price">₹890 <button onclick="addToCart('Mahanarayan Oil', 890)">ADD</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wellness Cart -->
+        <aside class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Your Wellness Cart</h3>
+                <span class="item-count">(<span id="cart-count">0</span> items)</span>
+            </div>
+            <div class="cart-items" id="cart-items"></div>
+            <div class="bill-details">
+                <div class="total">
+                    <span>Total Amount</span>
+                    <span>₹<span id="total-price">0</span></span>
+                </div>
+                <button class="checkout-btn" onclick="checkout()">PROCEED TO CHECKOUT</button>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>

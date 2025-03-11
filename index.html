@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AyurvedaVeda</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="branding">
+            <img src="ayurveda-logo.png" alt="AyurvedaVeda" class="logo">
+        </div>
+        <div class="auth-form">
+            <h2>Welcome to AyurvedaVeda</h2>
+            <div class="input-group">
+                <input type="text" id="mobile" placeholder="Enter Mobile Number" maxlength="10">
+            </div>
+            <button class="otp-btn" onclick="sendOTP()">Send OTP</button>
+            <div class="separator">or</div>
+            <button class="social-login google">
+                <i class="fab fa-google"></i>
+                Continue with Google
+            </button>
+            <button class="social-login facebook">
+                <i class="fab fa-facebook-f"></i>
+                Continue with Facebook
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function sendOTP() {
+            const mobile = document.getElementById('mobile').value;
+            if(mobile.length === 10) {
+                window.location.href = 'menu.html';
+            }
+        }
+    </script>
+</body>
+</html>
